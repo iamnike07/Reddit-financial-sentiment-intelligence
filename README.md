@@ -1,4 +1,4 @@
-# 📡 Reddit Financial Sentiment Intelligence (Social Listening & Text Mining)
+#  Reddit Financial Sentiment Intelligence (Social Listening & Text Mining)
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Executive Overview
+##  Executive Overview
 
 Retail social communities (e.g., `r/wallstreetbets`, `r/CryptoCurrency`, `r/stocks`, `r/Bitcoin`) generate massive volumes of high-velocity, unstructured financial discourse. While retail activity can trigger significant market momentum, the raw text is notoriously noisy, sarcastic, and loaded with evolving internet slang.
 
@@ -23,7 +23,7 @@ This platform implements an end-to-end text mining and predictive pipeline:
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```mermaid
 flowchart TD
@@ -60,7 +60,7 @@ flowchart TD
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 ### 1. Robust Data Pipeline
 - **Dual Data Modes**: Toggle between live Reddit API scraping with PRAW and a realistic, offline-ready 9-month synthetic data generator with power-law engagement distributions and weekend/weekday seasonality.
@@ -87,7 +87,7 @@ flowchart TD
 
 ---
 
-## 📂 Project Repository Structure
+##  Project Repository Structure
 
 ```
 reddit_sentiment_intel/
@@ -134,19 +134,19 @@ reddit_sentiment_intel/
 
 ---
 
-## 🖥️ Dashboard Walkthrough
+##  Dashboard Walkthrough
 
 | Page | Key Capabilities |
 | :--- | :--- |
-| **🏠 Overview** | Global KPI cards (Total Posts, Net Sentiment Polarity, Active Narratives, 7-day Trend), real-time sentiment distribution donut chart, and cross-subreddit sentiment heatmap. |
-| **📊 Topic Explorer** | Interactive stacked area chart of narrative volume over time, topic positioning bubble chart (volume vs sentiment), top n-gram keywords, and raw post inspection. |
-| **📈 Sentiment Tracker** | Multi-resolution sentiment time-series (Raw, 7d MA, 14d MA), engagement-weighted vs unweighted comparison, ticker-specific drill-down, and Prophet 14-day forecasts with 95% confidence bands. |
-| **🔬 Causality Lab** | Interactive econometric testing suite. Select any asset (`BTC`, `ETH`, `AAPL`, `TSLA`, `GME`, `NVDA`, `SPY`), run ADF stationarity verification, bidirectional Granger causality F-tests (lags 1–14), and cross-correlation heatmaps. |
-| **📋 Client Memo** | Auto-synthesized one-page executive memo written in plain English, highlighting top drivers, market risks, forecasting trajectories, and download button for markdown report export. |
+| ** Overview** | Global KPI cards (Total Posts, Net Sentiment Polarity, Active Narratives, 7-day Trend), real-time sentiment distribution donut chart, and cross-subreddit sentiment heatmap. |
+| ** Topic Explorer** | Interactive stacked area chart of narrative volume over time, topic positioning bubble chart (volume vs sentiment), top n-gram keywords, and raw post inspection. |
+| ** Sentiment Tracker** | Multi-resolution sentiment time-series (Raw, 7d MA, 14d MA), engagement-weighted vs unweighted comparison, ticker-specific drill-down, and Prophet 14-day forecasts with 95% confidence bands. |
+| ** Causality Lab** | Interactive econometric testing suite. Select any asset (`BTC`, `ETH`, `AAPL`, `TSLA`, `GME`, `NVDA`, `SPY`), run ADF stationarity verification, bidirectional Granger causality F-tests (lags 1–14), and cross-correlation heatmaps. |
+| ** Client Memo** | Auto-synthesized one-page executive memo written in plain English, highlighting top drivers, market risks, forecasting trajectories, and download button for markdown report export. |
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -193,7 +193,7 @@ Open [http://localhost:8501](http://localhost:8501) in your browser. Click **"�
 
 ---
 
-## 🧪 Running the Pipeline Programmatically
+## Running the Pipeline Programmatically
 
 You can also run or verify the full end-to-end pipeline directly via the Python CLI:
 
@@ -230,7 +230,7 @@ print("Pipeline successfully executed!")
 
 ---
 
-## ⚙️ Configuration Reference
+## Configuration Reference
 
 All settings can be customized in [`config.py`](config.py):
 
@@ -248,7 +248,7 @@ All settings can be customized in [`config.py`](config.py):
 
 ---
 
-## 📈 Methodology & Analytical Nuances
+##  Methodology & Analytical Nuances
 
 1. **Why MiniLM for Topics + FinBERT for Sentiment?**
    Generating 768-dimensional transformer embeddings over thousands of documents during topic clustering is computationally redundant. We pair high-throughput sentence transformer embeddings (`all-MiniLM-L6-v2`) with UMAP for dimensionality reduction, while reserving `ProsusAI/finbert` exclusively for sentiment inference where domain precision is paramount.
@@ -261,12 +261,12 @@ All settings can be customized in [`config.py`](config.py):
 
 ---
 
-## 🛡️ Disclaimer
+##  Disclaimer
 
 This software is developed strictly for research, educational, and text mining demonstration purposes. It does not constitute financial, investment, or legal advice. Historical social sentiment trends and econometric lead-lag tests are not guarantees of future market performance.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
